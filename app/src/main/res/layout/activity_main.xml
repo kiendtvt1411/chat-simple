@@ -1,18 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="dhbkhn.kien.simplechat.MainActivity">
+    android:orientation="vertical"
+    tools:context="dhbkhn.kien.simplechat.view.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="List User"
+            android:layout_margin="5dp"
+            android:textSize="18sp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOG OUT"
+            android:id="@+id/btnLogout"
+            />
+    </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="5dp"
+        android:id="@+id/lvUserList"
+        android:background="#cccccc"
+        ></ListView>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="5dp"
+        android:id="@+id/lvMessList"
+        android:background="#cccccc"
+        ></ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type something..."
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:id="@+id/edtMess"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@android:color/transparent"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEND"
+            android:id="@+id/btnSend"
+            />
+    </LinearLayout>
+</LinearLayout>
